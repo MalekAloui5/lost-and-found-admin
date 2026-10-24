@@ -1,27 +1,20 @@
-# Admin
+# ⚙️ Lost and Found - Admin & Backend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+Le module d'administration et Backend REST API développé avec **Spring Boot** pour l'application **Lost and Found**.
 
-## Development server
+## 🚀 Fonctionnalités
+- **Gestion des Utilisateurs :** Modération des comptes et gestion des rôles.
+- **Statistiques & Dashboard :** Suivi des annonces publiées et résolues.
+- **API REST Services :** Endpoints sécurisés pour la gestion des objets perdus et trouvés.
+- **Sécurité :** Authentification et gestion des autorisations.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🛠️ Technologies utilisées
+- **Backend :** Java / Spring Boot (Spring Web, Spring Data JPA)
+- **Base de données :** MySQL
+- **Build Tool :** Maven
 
-## Code scaffolding
+## ⚙️ Installation & Lancement
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Cloner le repository :
+   ```bash
+   git clone [https://github.com/MalekAloui5/lost-and-found-admin.git](https://github.com/MalekAloui5/lost-and-found-admin.git)
