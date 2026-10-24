@@ -1,0 +1,96 @@
+<app-header></app-header>
+<app-menu></app-menu>
+
+
+
+
+
+
+
+
+<div class="mt-5">
+  <form [formGroup]="updateadminForm"> ... </form>
+</div>
+
+<div class="container">
+
+
+<div class="row gutters">
+
+<div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+<div class="card h-100">
+                <form (ngSubmit)=" updateadmin()" [formGroup]="updateadminForm">
+
+	<div class="card-body">
+		<div class="row gutters">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<h6 class="mb-2 text-primary">Personal Details</h6>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="fullName">Nom:</label>
+					<input formControlName="nom" type="text" class="form-control" id="fullName" placeholder="Enter votre nom">
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="eMail">Prenom:</label>
+					<input formControlName="prenom" type="text" class="form-control" id="eMail" placeholder="Enter votre prenom">
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="phone">Email:</label>
+					<input formControlName="email" type="email" class="form-control" id="phone" placeholder="Enter votre email">
+				</div>
+			</div>
+            <div class="row gutters">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<h6 class="mt-3 mb-2 text-primary">Mot De Passe:</h6>
+                <input formControlName="mdp" type="password" class="form-control" id="MDP" placeholder="Entrer votre mdp">
+
+                
+			</div>
+			
+			
+			
+			
+		</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="website">Role:</label>
+                    <select [disabled]="!isSuperAdmin" formControlName="role" class="form-control" id="exampleFormControlSelect1">
+                                   <option value="sousAdmin">Sous Administrateur </option>
+                                    
+                                    <option value="SuperAdmin">Super Administrateur </option>
+                                    
+                                 </select>
+				</div>
+                <small *ngIf="!isSuperAdmin" class="text-danger">
+                Vous n'avez pas le droit de modifier le rôle
+    </small>
+			</div>
+		</div>
+		
+		<div class="row gutters">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="text-right">
+				<button type="reset" class="btn btn-secondary">
+  Cancel
+</button>
+
+<!-- Update -->
+<button type="submit" class="btn btn-primary" (click)="updateadmin()">
+  Update
+</button>		
+
+				
+				</div>
+			</div>
+		</div>
+	</div>
+    </form>
+</div>
+</div>
+</div>
+</div>

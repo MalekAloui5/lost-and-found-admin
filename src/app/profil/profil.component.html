@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Profil Admin</title>
+</head>
+<body class="sidebar-main-active right-column-fixed">
+
+  <div class="wrapper">
+    <!-- Sidebar -->
+    <app-menu></app-menu>
+    <!-- Header -->
+    <app-header></app-header>
+
+    <!-- Page Content -->
+    <div id="content-page" class="content-page">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="iq-card">
+              <div class="iq-card-body p-0">
+                <div class="iq-edit-list">
+                  <ul class="iq-edit-profile d-flex nav nav-pills">
+                    <li class="col-md-3 p-0">
+                      <a class="nav-link active" data-toggle="pill" href="#personal-information">
+                        Personal Information
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- الكارد الموحد -->
+                <div class="card mb-4">
+                  <!-- القسم الأول: الصورة والاسم -->
+                  <div class="card-body text-center">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
+                         alt="avatar"
+                         class="rounded-circle img-fluid"
+                         style="width: 150px;">
+                    <h5 class="my-3">{{userDetails.nom}} {{userDetails.prenom}}</h5>
+                    <p class="text-muted mb-1">{{userDetails.role}}</p>
+                  </div>
+
+                  <hr>
+
+                  <!-- القسم الثاني: التفاصيل -->
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-sm-3"><p class="mb-0">Nom:</p></div>
+                      <div class="col-sm-9"><p class="text-muted mb-0">{{userDetails.nom}}</p></div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-3"><p class="mb-0">Prenom:</p></div>
+                      <div class="col-sm-9"><p class="text-muted mb-0">{{userDetails.prenom}}</p></div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-3"><p class="mb-0">Email:</p></div>
+                      <div class="col-sm-9"><p class="text-muted mb-0">{{userDetails.email}}</p></div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-3"><p class="mb-0">Role:</p></div>
+                      <div class="col-sm-9"><p class="text-muted mb-0">{{userDetails.role}}</p></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- زر التعديل -->
+                <a [routerLink]="'/modifierprofil/' + userDetails.id" class="btn btn-primary mr-2">
+                  Modifier
+                </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <app-footer></app-footer>
+  </div>
+
+</body>
+</html>

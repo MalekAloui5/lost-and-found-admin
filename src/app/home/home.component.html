@@ -1,0 +1,66 @@
+<div class="page-wrapper">
+
+  <app-menu></app-menu>
+  <app-header></app-header>
+
+  <main class="page-content">
+    <div class="container-fluid">
+
+      <!-- Stats Cards -->
+      <div class="stats-grid">
+
+        <!-- ADMIN -->
+        <div class="stat-card" routerLink="/listeAdmin">
+          <div class="stat-icon" style="background:#e3f2fd;">
+            <i class="las la-user-shield" style="color:#1e88e5;"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-label">Administrateur</span>
+            <span class="stat-value" style="color:#1e88e5;">{{totalAdmin}} </span>
+          </div>
+          <div class="stat-bar" style="--bar-color:#1e88e5;"></div>
+        </div>
+
+        <!-- CLIENT -->
+        <div class="stat-card" routerLink="/listeClient">
+          <div class="stat-icon" style="background:#e8f5e9;">
+            <i class="las la-users" style="color:#2e7d32;"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-label">Clients</span>
+            <span class="stat-value" style="color:#2e7d32;">{{totalClient}} </span>
+          </div>
+          <div class="stat-bar" style="--bar-color:#2e7d32;"></div>
+        </div>
+
+        <!-- EXPERT -->
+        <div class="stat-card" routerLink="/listeExpert">
+          <div class="stat-icon" style="background:#fff8e1;">
+            <i class="las la-microscope" style="color:#f9a825;"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-label">Offre</span>
+            <span class="stat-value" style="color:#f9a825;">{{totalOffre}} </span>
+          </div>
+          <div class="stat-bar" style="--bar-color:#f9a825;"></div>
+        </div>
+
+      </div>
+
+      <!-- Chart -->
+    <div class="chart-card">
+        <div class="chart-card-header">
+          <h5 class="chart-title">Répartition globale</h5>
+          <span class="chart-subtitle">Pourcentage par rôle</span>
+        </div>
+        <div class="chart-body">
+          <canvas id="percentageCanvas" width="350" height="350"></canvas>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <app-footer></app-footer>
+
+</div>
